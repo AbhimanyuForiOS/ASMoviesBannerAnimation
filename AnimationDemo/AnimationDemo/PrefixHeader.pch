@@ -1,0 +1,27 @@
+//
+//  PrefixHeader.pch
+//  AnimationDemo
+//
+//  Created by Abhimanyu  on 30/08/17.
+//  Copyright © 2017 Konstant. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "iCarousel.h"
+#import "Animator.h"
+#import "Animator+MainSlider.h"
+#import "Animator+DetailedSlider.h"
+#import "FXImageView.h"
+
+
+
+#define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
+
+#define  APP_DEL (AppDelegate *)[UIApplication sharedApplication].delegate
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
