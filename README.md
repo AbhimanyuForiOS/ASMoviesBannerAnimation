@@ -17,21 +17,9 @@ STEP 3:- go in your ViewController class where you want to implement it and Set 
 
 STEP 4:- Finally configure  your   ViewController.m  for final set up with few line of code.
 
-#pragma mark:- View Life Cycle
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [[Animator shared]setSwiperWithConfig:[[AnimationConfiguration alloc]init] OnView:self.view];
-    [Animator shared].delegate = self;
-}
-#pragma mark:- Animator delegate
--(void)selectedModel:(Model *)model andImg:(UIImage *)img{  
-  
-  NSString * str = [NSString stringWithFormat:@"you selected an Movie from %@",model.titleHeader];
-    
-    UIAlertView * alrt = [[UIAlertView alloc]initWithTitle:@"As Indicator" message:str delegate:self cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
-    [alrt show];
-}
+![screen shot 2017-08-31 at 8 26 07 pm](https://user-images.githubusercontent.com/7630897/29929900-7e3b5bb6-8e8a-11e7-99f6-26959ef8ec7b.png)
+
+That's it for this welcome animation home screen , Happy Coding!
 
 
 
