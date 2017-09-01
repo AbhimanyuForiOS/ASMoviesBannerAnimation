@@ -1,6 +1,7 @@
 # ASMoviesBannerAnimation
 Movie Banner
 ![movies](https://user-images.githubusercontent.com/7630897/29928768-53531c2a-8e87-11e7-94d8-507c61a19709.gif)
+Design Creativity credit goes to :-  By https://dribbble.com/shots/2663131-Movies
 
 
 You can use this welcome or Home Screen Stylish Animation for your iOS Applications easily.
