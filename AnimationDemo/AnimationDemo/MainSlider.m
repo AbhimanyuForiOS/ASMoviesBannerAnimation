@@ -56,13 +56,16 @@
         lbl.tag             = 555;
         lbl.text            = m.titleHeader;
         
-        if ([Animator shared].config.hMainSlider == [Animator shared].config.expandHeight)
-            lbl.font            = [Animator shared].config.fontTitleBig;
-        else
+//        if ([Animator shared].config.hMainSlider == [Animator shared].config.expandHeight)
+//            lbl.font            = [Animator shared].config.fontTitleBig;
+//        else
              lbl.font            = [Animator shared].config.fontTitle;
         
         lbl.textAlignment   = NSTextAlignmentCenter;
-        lbl.textColor =  [Animator shared].config.headerSelectedTextColor;
+        if (index == 0)
+            lbl.textColor =  [Animator shared].config.headerSelectedTextColor;
+        else
+            lbl.textColor =  [Animator shared].config.headerNormalTextColor;
         
         lbl.backgroundColor = [UIColor clearColor];
         
@@ -73,46 +76,45 @@
     }
 
     view.tag = index;
-
    
-    for (UIView * v in view.subviews) {
-        if ([v isKindOfClass:[UILabel class]]){
-            UILabel * lbl       = (UILabel *)v;
-            
-            lbl.textColor =  [Animator shared].config.headerNormalTextColor;
-        }
-    }
     
-    
-    if (index == self.collection.currentItemIndex) {
-        //change the view
-            for (UIView * v in view.subviews) {
-                if ([v isKindOfClass:[UILabel class]]){
-                    UILabel * lbl       = (UILabel *)v;
-        
-                            lbl.textColor =  [Animator shared].config.headerSelectedTextColor;
-                }
-            }
-    }
-    
-   
     //show placeholder
     ((FXImageView *)view).processedImage = [UIImage imageNamed:@"placeholder.png"];
     
     //set image
    //((FXImageView *)view).image = _images[index];
-    
     return view;
 }
 
 - (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
     //you need to reload carousel for update view of current index
-        [self.collection reloadData];
+
      [self updateImagesToo];
-  
+    
+    NSMutableArray * visibleItems = [[NSMutableArray alloc]initWithArray:carousel.visibleItemViews];
+    
+    
+    NSLog(@"visibleItems %@",visibleItems);
+    
+    for (UIView * v in visibleItems) {
+        NSLog(@"subviews %@",v.subviews);
+        //change the view
+        for (UIView * view in v.subviews) {
+            NSLog(@"lbl %@",view);
+            if ([view isKindOfClass:[UILabel class]]){
+                UILabel * lbl       = (UILabel *)view;
+                
+                if (v == self.collection.currentItemView) {
+                    lbl.textColor =  [Animator shared].config.headerSelectedTextColor;
+                }else{
+                    lbl.textColor =  [Animator shared].config.headerNormalTextColor;
+                }
+                
+            }
+        }
+    }
+
 }
-
-
 
 -(void)carouselDidEndDecelerating:(iCarousel *)carousel{
 

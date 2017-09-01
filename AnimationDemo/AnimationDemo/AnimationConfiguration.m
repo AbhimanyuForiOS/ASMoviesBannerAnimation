@@ -47,8 +47,7 @@
                 self.fontTitle                          = [UIFont boldSystemFontOfSize:SCREEN_WIDTH*0.055];
                 self.fontTitleBig                          = [UIFont boldSystemFontOfSize:SCREEN_WIDTH*0.065];
         
-        
-        
+    
         
                 // fill detailed model bydefault
                 models = [[NSMutableArray alloc]init];

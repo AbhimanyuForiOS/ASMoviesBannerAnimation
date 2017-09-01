@@ -179,7 +179,6 @@
 				6FA80E561F569EB800E63C79 /* Info.plist */,
 				6FA80E4E1F569EB800E63C79 /* AnimationDemo.xcdatamodeld */,
 				6FA80E421F569EB800E63C79 /* Supporting Files */,
-				6FA80E7E1F56BBF600E63C79 /* PrefixHeader.pch */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -187,6 +186,7 @@
 		6FA80E421F569EB800E63C79 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6FA80E7E1F56BBF600E63C79 /* PrefixHeader.pch */,
 				6FA80E431F569EB800E63C79 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -420,7 +420,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = /Users/abhimanyu/Documents/Learning/AnimationDemo/AnimationDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = ..AnimationDemo/AnimationDemo/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -470,7 +470,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = /Users/abhimanyu/Documents/Learning/AnimationDemo/AnimationDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = ..AnimationDemo/AnimationDemo/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -492,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vipin Jain (ESHL9PZXSM)";
 				DEVELOPMENT_TEAM = 5ND5C759FU;
+				GCC_PREFIX_HEADER = ../AnimationDemo/AnimationDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipl.taxipassengerapp;
@@ -507,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vipin Jain (ESHL9PZXSM)";
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = ../AnimationDemo/AnimationDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = AnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipl.taxipassengerapp;

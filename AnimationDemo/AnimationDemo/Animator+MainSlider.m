@@ -54,7 +54,6 @@
      [self.mainSlider.collection  setDataSource:self.mainSlider];
      [self.mainSlider.collection  setDelegate:self.mainSlider];
 
-    //[self.mainSlider.collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
     [self.mainSlider.collection setBackgroundColor:[UIColor whiteColor]];
     self.mainSlider.collection.translatesAutoresizingMaskIntoConstraints = false;
     [self.mainSlider addSubview:self.mainSlider.collection];

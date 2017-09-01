@@ -18,6 +18,7 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
+    
     //create new view if no view is available for recycling
     if (view == nil)
     {
@@ -38,18 +39,18 @@
         btn.tag  = index;
         [btn addTarget:self action:@selector(selectedItemtaped:) forControlEvents:UIControlEventTouchUpInside];
         [imageView addSubview:btn];
-        
-        
         view                        = imageView;
     }
-    
-    view.tag = index;
 
+    view.tag = index;
+    
     //show placeholder
     ((FXImageView *)view).processedImage = [UIImage imageNamed:@"placeholder.png"];
     
     //set image
     ((FXImageView *)view).image =(UIImage *)[_images objectAtIndex:index];
+    
+    
     
     return view;
 }

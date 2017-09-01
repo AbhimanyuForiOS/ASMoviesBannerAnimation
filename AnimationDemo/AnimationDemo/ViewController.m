@@ -24,6 +24,7 @@
 
 -(void)setUpAnimator{
     
+                [self.view layoutIfNeeded];
                 [[Animator shared]setSwiperWithConfig:[[AnimationConfiguration alloc]init] OnView:self.view];
                 [Animator shared].delegate = self;
 }
